@@ -1,0 +1,50 @@
+{
+  "official": {
+    "usage": {
+      "prompt_tokens": 999906,
+      "total_tokens": 1000930,
+      "completion_tokens": 1024,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "elapsed_s": 222.55735999900207,
+    "ttft_s": 217.31444700900101,
+    "time_to_content_s": 217.3144489389997,
+    "decode_wall_s": 5.234292351000477,
+    "decode_tokens_per_s": 195.44189193109648,
+    "end_to_end_output_tokens_per_s": 4.601061047833204,
+    "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens.",
+    "model": "deepseek-v4.1-flash-1017",
+    "time": 1793849672.3762615,
+    "input_tokens_without_chat_wrapper": 999892,
+    "measurement_condition": "Single trial, approximately 1M input, 1024 output budget, temperature=0, top_p=1",
+    "passed": true,
+    "answer_excerpt": "标记A的八位编号是73194628。\n标记B的八位编号是48275913。\n标记C的八位编号是19638472。\n\n档案备份、校验、恢复测试与容量管理技术说明\n\n档案数据具有不可再生、长期保存和可追溯性要求高等特点，因此备份体系不能仅停留在“定期拷贝”层面，而应围绕备份策略、完整性校验、恢复验证和容量治理形成闭环。结合本档案中大量记录均标注“状态已核验”的特点，可以将核验状态视为数据治理的基础状态，但核验并不等同于可恢复，仍需通过独立备份、周期校验和恢复演练来证明数据在需要时能够被正确取回。\n\n"
+  },
+  "abliterated": {
+    "usage": {
+      "prompt_tokens": 999906,
+      "total_tokens": 1000930,
+      "completion_tokens": 1024,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "elapsed_s": 223.33140808700045,
+    "ttft_s": 217.7248379449993,
+    "time_to_content_s": 217.7248391840003,
+    "decode_wall_s": 5.594981783000549,
+    "decode_tokens_per_s": 182.8424183807391,
+    "end_to_end_output_tokens_per_s": 4.585114152869591,
+    "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens.",
+    "model": "deepseek-v4.1-flash-1017-abliterated",
+    "time": 1793848621.6979809,
+    "input_tokens_without_chat_wrapper": 999892,
+    "measurement_condition": "Single trial, approximately 1M input, 1024 output budget, temperature=0, top_p=1",
+    "passed": true,
+    "answer_excerpt": "标记A的八位编号是73194628。\n标记B的八位编号是48275913。\n标记C的八位编号是19638472。\n\n档案备份、校验、恢复测试与容量管理技术说明\n\n档案数据具有不可再生、长期保存和频繁调阅的特点，一旦发生介质损坏、误删除、软件缺陷或人为操作失误，可能造成难以弥补的损失。因此，档案管理系统应围绕备份、校验、恢复测试和容量管理建立一套闭环的技术机制，使数据在整个生命周期内始终处于可恢复、可验证、可扩展的状态。\n\n一、档案备份\n\n档案备份的核心目标是保证在任何单点故障发生时，仍能获得完整"
+  }
+}

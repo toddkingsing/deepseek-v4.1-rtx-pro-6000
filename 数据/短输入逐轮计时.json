@@ -1,0 +1,384 @@
+{
+  "official": [
+    {
+      "case": "chinese",
+      "round": 0,
+      "prompt": "请详细介绍数据库备份和恢复的完整流程，至少写2000字。",
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 1054,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.528149274003226,
+      "ttft_s": 0.22459283400166896,
+      "time_to_content_s": 0.22459398600040004,
+      "decode_wall_s": 4.299538199000381,
+      "decode_tokens_per_s": 237.93252964651924,
+      "end_to_end_output_tokens_per_s": 226.14095473374414,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "code",
+      "round": 0,
+      "prompt": "Write a detailed Python example implementing a reliable disk-backed task queue using sqlite3. Include explanations and extensive comments. Keep writing for at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 47,
+        "total_tokens": 1071,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.246370831002423,
+      "ttft_s": 0.22367391300213058,
+      "time_to_content_s": 0.22367524500077707,
+      "decode_wall_s": 4.019916336001188,
+      "decode_tokens_per_s": 254.48290822331623,
+      "end_to_end_output_tokens_per_s": 241.14709731045053,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "english",
+      "round": 0,
+      "prompt": "Write a detailed technical article about distributed storage consistency, failure recovery, and performance engineering. Write at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 1063,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 5.137944726000569,
+      "ttft_s": 0.19723069999963627,
+      "time_to_content_s": 0.1972318810003344,
+      "decode_wall_s": 4.934769155999675,
+      "decode_tokens_per_s": 207.3045298899626,
+      "end_to_end_output_tokens_per_s": 199.30148232581172,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "chinese",
+      "round": 1,
+      "prompt": "请详细介绍数据库备份和恢复的完整流程，至少写2000字。",
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 1054,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.616865529998904,
+      "ttft_s": 0.1957813230001193,
+      "time_to_content_s": 0.1957825790013885,
+      "decode_wall_s": 4.4179733710006985,
+      "decode_tokens_per_s": 231.55413446240038,
+      "end_to_end_output_tokens_per_s": 221.79550029048454,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "code",
+      "round": 1,
+      "prompt": "Write a detailed Python example implementing a reliable disk-backed task queue using sqlite3. Include explanations and extensive comments. Keep writing for at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 47,
+        "total_tokens": 1071,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.209703878997971,
+      "ttft_s": 0.1974917400002596,
+      "time_to_content_s": 0.19749293600034434,
+      "decode_wall_s": 4.008858077999321,
+      "decode_tokens_per_s": 255.18488808926435,
+      "end_to_end_output_tokens_per_s": 243.24751322977642,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "english",
+      "round": 1,
+      "prompt": "Write a detailed technical article about distributed storage consistency, failure recovery, and performance engineering. Write at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 1063,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.994737507997343,
+      "ttft_s": 0.1966521089998423,
+      "time_to_content_s": 0.19665327099937713,
+      "decode_wall_s": 4.79503917799957,
+      "decode_tokens_per_s": 213.34549354543185,
+      "end_to_end_output_tokens_per_s": 205.01577877924888,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "chinese",
+      "round": 2,
+      "prompt": "请详细介绍数据库备份和恢复的完整流程，至少写2000字。",
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 1054,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.391058017998148,
+      "ttft_s": 0.19372985599693493,
+      "time_to_content_s": 0.19373109299704083,
+      "decode_wall_s": 4.194569399001921,
+      "decode_tokens_per_s": 243.8867742284627,
+      "end_to_end_output_tokens_per_s": 233.20120021252515,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "code",
+      "round": 2,
+      "prompt": "Write a detailed Python example implementing a reliable disk-backed task queue using sqlite3. Include explanations and extensive comments. Keep writing for at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 47,
+        "total_tokens": 1071,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.065937735998887,
+      "ttft_s": 0.1964638620011101,
+      "time_to_content_s": 0.19646522200127947,
+      "decode_wall_s": 3.8666029939995497,
+      "decode_tokens_per_s": 264.57332226441633,
+      "end_to_end_output_tokens_per_s": 251.84842132080314,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "english",
+      "round": 2,
+      "prompt": "Write a detailed technical article about distributed storage consistency, failure recovery, and performance engineering. Write at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 1063,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.93246807900141,
+      "ttft_s": 0.1967864569996891,
+      "time_to_content_s": 0.1967877770002815,
+      "decode_wall_s": 4.730999303999852,
+      "decode_tokens_per_s": 216.23338628164635,
+      "end_to_end_output_tokens_per_s": 207.60397910315749,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    }
+  ],
+  "abliterated": [
+    {
+      "case": "chinese",
+      "round": 0,
+      "prompt": "请详细介绍数据库备份和恢复的完整流程，至少写2000字。",
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 1054,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.695922566999798,
+      "ttft_s": 0.20597731999805546,
+      "time_to_content_s": 0.20597944000110147,
+      "decode_wall_s": 4.484863731002406,
+      "decode_tokens_per_s": 228.1005759279448,
+      "end_to_end_output_tokens_per_s": 218.06151728226402,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "code",
+      "round": 0,
+      "prompt": "Write a detailed Python example implementing a reliable disk-backed task queue using sqlite3. Include explanations and extensive comments. Keep writing for at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 47,
+        "total_tokens": 1071,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.126099998997233,
+      "ttft_s": 0.23125826199975563,
+      "time_to_content_s": 0.23125953899943852,
+      "decode_wall_s": 3.8903951159991266,
+      "decode_tokens_per_s": 262.9552961839133,
+      "end_to_end_output_tokens_per_s": 248.17624397102904,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "english",
+      "round": 0,
+      "prompt": "Write a detailed technical article about distributed storage consistency, failure recovery, and performance engineering. Write at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 1063,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 5.053007054000773,
+      "ttft_s": 0.20593231999737327,
+      "time_to_content_s": 0.2059335199992347,
+      "decode_wall_s": 4.8428326310022385,
+      "decode_tokens_per_s": 211.24000723276848,
+      "end_to_end_output_tokens_per_s": 202.6516070642009,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "chinese",
+      "round": 1,
+      "prompt": "请详细介绍数据库备份和恢复的完整流程，至少写2000字。",
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 1054,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.581853736999619,
+      "ttft_s": 0.20233098300013808,
+      "time_to_content_s": 0.2023322349996306,
+      "decode_wall_s": 4.375465615001303,
+      "decode_tokens_per_s": 233.80368857034094,
+      "end_to_end_output_tokens_per_s": 223.49032919382452,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "code",
+      "round": 1,
+      "prompt": "Write a detailed Python example implementing a reliable disk-backed task queue using sqlite3. Include explanations and extensive comments. Keep writing for at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 47,
+        "total_tokens": 1071,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.228415710997069,
+      "ttft_s": 0.20593005499904393,
+      "time_to_content_s": 0.2059313129975635,
+      "decode_wall_s": 4.018153182998503,
+      "decode_tokens_per_s": 254.5945745245574,
+      "end_to_end_output_tokens_per_s": 242.1710801369004,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "english",
+      "round": 1,
+      "prompt": "Write a detailed technical article about distributed storage consistency, failure recovery, and performance engineering. Write at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 1063,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.8883179889999155,
+      "ttft_s": 0.20478062500114902,
+      "time_to_content_s": 0.20478187800108572,
+      "decode_wall_s": 4.679652664999594,
+      "decode_tokens_per_s": 218.60596784271996,
+      "end_to_end_output_tokens_per_s": 209.47900736087274,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "chinese",
+      "round": 2,
+      "prompt": "请详细介绍数据库备份和恢复的完整流程，至少写2000字。",
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 1054,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.54337298199971,
+      "ttft_s": 0.19764559699979145,
+      "time_to_content_s": 0.19764714199845912,
+      "decode_wall_s": 4.3421910849974665,
+      "decode_tokens_per_s": 235.5953434510349,
+      "end_to_end_output_tokens_per_s": 225.38321288103865,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "code",
+      "round": 2,
+      "prompt": "Write a detailed Python example implementing a reliable disk-backed task queue using sqlite3. Include explanations and extensive comments. Keep writing for at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 47,
+        "total_tokens": 1071,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.081299991001288,
+      "ttft_s": 0.20041159200263792,
+      "time_to_content_s": 0.200412916001369,
+      "decode_wall_s": 3.8755144129972905,
+      "decode_tokens_per_s": 263.9649581921746,
+      "end_to_end_output_tokens_per_s": 250.90044893974493,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    },
+    {
+      "case": "english",
+      "round": 2,
+      "prompt": "Write a detailed technical article about distributed storage consistency, failure recovery, and performance engineering. Write at least 2000 words.",
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 1063,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "elapsed_s": 4.800515102000645,
+      "ttft_s": 0.20486211599927628,
+      "time_to_content_s": 0.2048631830002705,
+      "decode_wall_s": 4.591507962999458,
+      "decode_tokens_per_s": 222.80261914905032,
+      "end_to_end_output_tokens_per_s": 213.31044236757873,
+      "measurement_note": "Client SSE decode rate includes reasoning; speculative chunks may contain multiple tokens."
+    }
+  ]
+}

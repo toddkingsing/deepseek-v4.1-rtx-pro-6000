@@ -1,0 +1,11 @@
+{
+  "note": "Historical fixed workload results; do not mix with the later three-task paired comparison. Kernel gains were not isolated at identical output trajectories.",
+  "moet_basic_tps": 180.64,
+  "gemv_tps": 192.76,
+  "gemv_p2p_candidate_tps": 209.37,
+  "gemv_p2p_production_tps": 202.26,
+  "activation_reuse_rejected_tps": 212.63,
+  "activation_reuse_rejection": "1 truncated answer; quality acceptance failed",
+  "historical_million_tps": 195.13,
+  "historical_million_ttft_s": 221.52
+}

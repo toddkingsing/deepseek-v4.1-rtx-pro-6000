@@ -1,0 +1,11 @@
+*.env
+.env*
+!.env.example
+__pycache__/
+*.pyc
+临时/
+模型/
+日志/
+*.tar
+*.safetensors
+*.gguf

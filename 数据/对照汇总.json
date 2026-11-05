@@ -1,0 +1,310 @@
+{
+  "quality": {
+    "gsm8k-chat": {
+      "official_correct": 197,
+      "abliterated_correct": 197,
+      "total": 200,
+      "change_percentage_points": 0.0,
+      "lost_ids": [],
+      "gained_ids": [],
+      "mcnemar_exact_two_sided_p": 1.0,
+      "official_truncated": 0,
+      "abliterated_truncated": 0
+    },
+    "gsm8k-low": {
+      "official_correct": 195,
+      "abliterated_correct": 192,
+      "total": 200,
+      "change_percentage_points": -1.5,
+      "lost_ids": [
+        288,
+        640,
+        1303
+      ],
+      "gained_ids": [],
+      "mcnemar_exact_two_sided_p": 0.25,
+      "official_truncated": 0,
+      "abliterated_truncated": 1
+    },
+    "mixed-chat": {
+      "official_correct": 29,
+      "abliterated_correct": 28,
+      "total": 30,
+      "change_percentage_points": -3.3333333333333335,
+      "lost_ids": [
+        23
+      ],
+      "gained_ids": [],
+      "mcnemar_exact_two_sided_p": 1.0,
+      "official_truncated": 0,
+      "abliterated_truncated": 0
+    },
+    "mixed-low": {
+      "official_correct": 30,
+      "abliterated_correct": 30,
+      "total": 30,
+      "change_percentage_points": 0.0,
+      "lost_ids": [],
+      "gained_ids": [],
+      "mcnemar_exact_two_sided_p": 1.0,
+      "official_truncated": 0,
+      "abliterated_truncated": 0
+    }
+  },
+  "speed": {
+    "chinese": {
+      "official_median_tps": 237.93252964651924,
+      "abliterated_median_tps": 233.80368857034094,
+      "change_percent": -1.7352991128671058,
+      "official_tps": [
+        237.93252964651924,
+        231.55413446240038,
+        243.8867742284627
+      ],
+      "abliterated_tps": [
+        228.1005759279448,
+        233.80368857034094,
+        235.5953434510349
+      ],
+      "output_tokens_official": [
+        1024,
+        1024,
+        1024
+      ],
+      "output_tokens_abliterated": [
+        1024,
+        1024,
+        1024
+      ]
+    },
+    "code": {
+      "official_median_tps": 255.18488808926435,
+      "abliterated_median_tps": 262.9552961839133,
+      "change_percent": 3.04501107131816,
+      "official_tps": [
+        254.48290822331623,
+        255.18488808926435,
+        264.57332226441633
+      ],
+      "abliterated_tps": [
+        262.9552961839133,
+        254.5945745245574,
+        263.9649581921746
+      ],
+      "output_tokens_official": [
+        1024,
+        1024,
+        1024
+      ],
+      "output_tokens_abliterated": [
+        1024,
+        1024,
+        1024
+      ]
+    },
+    "english": {
+      "official_median_tps": 213.34549354543185,
+      "abliterated_median_tps": 218.60596784271996,
+      "change_percent": 2.4657067791159504,
+      "official_tps": [
+        207.3045298899626,
+        213.34549354543185,
+        216.23338628164635
+      ],
+      "abliterated_tps": [
+        211.24000723276848,
+        218.60596784271996,
+        222.80261914905032
+      ],
+      "output_tokens_official": [
+        1024,
+        1024,
+        1024
+      ],
+      "output_tokens_abliterated": [
+        1024,
+        1024,
+        1024
+      ]
+    }
+  },
+  "long_context": {
+    "official": {
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 999906,
+        "total_tokens": 1000930,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "ttft_s": 217.31444700900101,
+      "decode_tokens_per_s": 195.44189193109648,
+      "elapsed_s": 222.55735999900207
+    },
+    "abliterated": {
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 999906,
+        "total_tokens": 1000930,
+        "completion_tokens": 1024,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "ttft_s": 217.7248379449993,
+      "decode_tokens_per_s": 182.8424183807391,
+      "elapsed_s": 223.33140808700045
+    }
+  },
+  "application": {
+    "official": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "model_identity",
+          "passed": true
+        },
+        {
+          "name": "multi_turn_update",
+          "passed": true
+        },
+        {
+          "name": "strict_json_schema",
+          "passed": true
+        },
+        {
+          "name": "tool_arguments",
+          "passed": true
+        },
+        {
+          "name": "tool_round_trip",
+          "passed": true
+        },
+        {
+          "name": "repeated_prefix_distinct_suffix",
+          "passed": true
+        },
+        {
+          "name": "cancel_releases_request",
+          "passed": true
+        },
+        {
+          "name": "request_after_cancellation",
+          "passed": true
+        },
+        {
+          "name": "service_stable",
+          "passed": true
+        },
+        {
+          "name": "answer_after_soak",
+          "passed": true
+        }
+      ]
+    },
+    "abliterated": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "model_identity",
+          "passed": true
+        },
+        {
+          "name": "multi_turn_update",
+          "passed": true
+        },
+        {
+          "name": "strict_json_schema",
+          "passed": true
+        },
+        {
+          "name": "tool_arguments",
+          "passed": true
+        },
+        {
+          "name": "tool_round_trip",
+          "passed": true
+        },
+        {
+          "name": "repeated_prefix_distinct_suffix",
+          "passed": true
+        },
+        {
+          "name": "cancel_releases_request",
+          "passed": true
+        },
+        {
+          "name": "request_after_cancellation",
+          "passed": true
+        },
+        {
+          "name": "service_stable",
+          "passed": true
+        },
+        {
+          "name": "answer_after_soak",
+          "passed": true
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "固定200道数学题和30道综合题，不代表所有领域正确率。",
+    "两模型顺序运行，未随机交替模型；热状态与服务外部负载可能影响速度。",
+    "每种短输出任务3轮；百万输入每模型仅1轮，不作为稳定尾延迟结论。",
+    "社区免拒答权重不意味着所有问题都不会拒绝。"
+  ],
+  "resource_peaks": {
+    "official": {
+      "gpu_memory_GiB": {
+        "0": 86.0283203125,
+        "1": 86.2275390625,
+        "2": 86.2275390625,
+        "3": 86.2216796875
+      },
+      "gpu_power_W": {
+        "0": 311.48,
+        "1": 310.99,
+        "2": 314.8,
+        "3": 305.93
+      },
+      "host_total_minus_available_GiB": 222.551513671875,
+      "cgroup_including_file_cache_GiB": 328.98720932006836,
+      "note": "约1M输入阶段采样峰值；主机和cgroup不是同一口径，不可相加。"
+    },
+    "abliterated": {
+      "gpu_memory_GiB": {
+        "0": 86.0263671875,
+        "1": 86.2216796875,
+        "2": 86.2216796875,
+        "3": 86.2216796875
+      },
+      "gpu_power_W": {
+        "0": 305.16,
+        "1": 309.02,
+        "2": 309.15,
+        "3": 309.05
+      },
+      "host_total_minus_available_GiB": 222.73176193237305,
+      "cgroup_including_file_cache_GiB": 331.33342361450195,
+      "note": "约1M输入阶段采样峰值；主机和cgroup不是同一口径，不可相加。"
+    }
+  },
+  "all_evaluations_finished": true,
+  "test_date": "2026-11-05",
+  "model_revisions": {
+    "official": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+    "abliterated": "517efab9ccfef7f714dbd7d679f181a86f43ccf9"
+  },
+  "runtime": {
+    "moet_commit": "a1d5b5e3ff8230790502e4123017c140d47bc150",
+    "local_image_id": "sha256:b40d0e35fe7b986a0fb3e3c98e969e63e00efe116ae734ab5b0bfc176ca6b887",
+    "image_id_note": "Local image content ID, not a published registry pull reference.",
+    "torch": "2.14.0+cu130",
+    "vllm": "0.32.1rc1.dev117+gdf3bd094a",
+    "flashinfer-python": "0.7.2",
+    "inference_parameters_equal_except_model": true
+  }
+}
