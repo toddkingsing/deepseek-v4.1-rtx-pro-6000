@@ -1,4 +1,4 @@
-# DeepSeek-V4.1 on four RTX PRO 6000 Blackwell Server GPUs
+# DeepSeek-V4.1-Flash-1017 on four RTX PRO 6000 Blackwell Server GPUs
 [KINGSING 官网原文 / Original article](https://www.kingsing.com/news/KINGSING_DeepSeek_V41_Local_AI_Deployment.html)
 
 本仓库为 KINGSING 官网公司新闻的摘要转载与配套技术资料。完整文章首先发表于官网；此处保留脱敏配置、可核查数据和复现说明。**Original publication: KINGSING Company News. This repository contains an attributed summary and supporting technical material.**
