@@ -3,9 +3,42 @@
 
 本仓库为 KINGSING 官网公司新闻的摘要转载与配套技术资料。完整文章首先发表于官网；此处保留脱敏配置、可核查数据和复现说明。**Original publication: KINGSING Company News. This repository contains an attributed summary and supporting technical material.**
 
-测试日期：2026-11-05。硬件为 4 × RTX PRO 6000 Blackwell Server Edition 96 GB、双路 Xeon Platinum 8558P、系统可见 499 GiB 内存。采用 Docker 内的固定 vLLM-Moet 版本、GEMV + P2P、DSpark K3、FP8 ds_mla KV；Engram 约 189.1 GiB 常驻 CPU RAM。
+## 2026-11-07 更新：W4A8 融合与冷预填充优化
 
-## 最终配对测试 / Paired results
+**当前默认已切换为 W4A8 融合 + DSpark K5（standard），适合单任务中文/代码输出；K3 保留为并发优先的已验证选择。** 本轮仅测试相同的社区修改版权重，不将结果归到官方原始权重上。性能实验于11月6日完成，上线验收于11月7日完成（北京时间）。
+
+| Workload / metric | Original A16 K3 | W4A8 K3 | W4A8 K5 |
+|---|---:|---:|---:|
+| 1 request(s), Chinese decode tok/s | 228.54 | 240.54 | 269.24 |
+| 1 request(s), Code decode tok/s | 255.72 | 272.39 | 327.75 |
+| 1 request(s), English decode tok/s | 219.80 | 253.79 | 243.15 |
+| 4 request(s), Chinese aggregate tok/s | 485.63 | 520.66 | 487.38 |
+| 4 request(s), Code aggregate tok/s | 525.68 | 586.79 | 530.41 |
+| 4 request(s), English aggregate tok/s | 471.29 | 506.30 | 441.54 |
+| 8 request(s), Chinese aggregate tok/s | 489.33 | 810.04 | 712.34 |
+| 8 request(s), Code aggregate tok/s | 517.88 | 850.97 | 800.10 |
+| 8 request(s), English aggregate tok/s | 464.50 | 733.77 | 678.77 |
+| 128,000-token cold TTFT (seconds) | 27.29 | 6.86 | 6.86 |
+| 1,000,000-token cold TTFT (seconds) | 222.55 | 55.40 | 55.33 |
+
+相对本轮同提示词原配置，K5单路中文提升17.8%、代码提升28.2%；K3八路聚合提升58.0%–65.5%。百万输入冷首字等待从222.55秒降至K5的55.33秒，减少75.1%。K5并非所有任务最快：单路英文和多路吞吐通常由K3领先。并发表为总吞吐，不是每路速度。
+
+本轮含10组配置与1次实验后原配置对照，共1,353次测速请求。C1每类5次，C4/C8每类3批；关闭思考，输出上限1,024，temperature=0、seed=731。冷预填充每长度2次，首部唯一盐值，缓存命中增量为0。实验前后原配置单路中位变化不超过0.50%，八路聚合不超过2.47%。
+
+两档W4A8候选的GSM8K chat均197/200，与基线同分同错题；混合chat为29/30（基线28/30），low为30/30；应用10项与合成图片2项通过。A16加速组和K4曾出现196/200，未剔除失败；原配置重复也能触发相同的截断/理解波动。有限样本不构成普遍质量等价证明，本轮未重跑GSM8K low，不覆盖最高思考档或LobeChat端到端任务耗时。
+
+共同设置：TP4、1,048,576上下文、FP8 KV 6 GiB/GPU、seqs=8、batch=8192、graph上限64、indexer分片阈值2048、prefill SP/fast、fused MoE和公平预填充。**强制A16必须设为0，相关W4A8融合路径才会进入。** TARGET_LM_HEAD_MXFP8和SM120_GEMV_BMM均保持0；block rejection未见明确优势，保留standard。八路测试使用短输入，不代表八路独立百万上下文容量。
+
+上线后另做每类3次单路复测：中文 276.21、代码 327.34、英文 229.30 tok/s；实际容器参数与验收候选匹配，接口别名、应用和图像检查通过。该小样本上线检查与上表5轮A/B分开报告。
+
+- [完整实验经验与取舍](文档/第三轮优化经验.md)
+- [W4A8两档配置快照](配置/第三轮W4A8配置.json)
+- [脱敏逐次计时与评分](数据/2026-11-06-第三轮实测.json)
+- 离线复算：`python 工具/核验第三轮数据.py`。历史数据继续用原核验脚本。
+
+历史批次测试日期：2026-11-05。硬件为 4 × RTX PRO 6000 Blackwell Server Edition 96 GB、双路 Xeon Platinum 8558P、系统可见 499 GiB 内存。采用 Docker 内的固定 vLLM-Moet 版本、GEMV + P2P、DSpark K3、FP8 ds_mla KV；Engram 约 189.1 GiB 常驻 CPU RAM。
+
+## 2026-11-05 历史官方/社区版对照 / Historical paired results
 
 | 指标 | 官方版 | 社区版（abliterated） |
 |---|---:|---:|
