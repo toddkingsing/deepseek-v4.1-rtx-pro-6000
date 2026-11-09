@@ -1,11 +1,26 @@
-# DeepSeek-V4.1-Flash-1017 on four RTX PRO 6000 Blackwell Server GPUs
+# DeepSeek-V4.1-Flash-1017 on four and eight RTX PRO 6000 Blackwell Server GPUs
 [KINGSING 官网原文 / Original article](https://www.kingsing.com/news/KINGSING_DeepSeek_V41_Local_AI_Deployment.html)
 
 本仓库为 KINGSING 官网公司新闻的摘要转载与配套技术资料。完整文章首先发表于官网；此处保留脱敏配置、可核查数据和复现说明。**Original publication: KINGSING Company News. This repository contains an attributed summary and supporting technical material.**
 
-## 2026-11-07 更新：W4A8 融合与冷预填充优化
+## 2026-11-09：八卡正式方案与24路百万输入
 
-**当前默认已切换为 W4A8 融合 + DSpark K5（standard），适合单任务中文/代码输出；K3 保留为并发优先的已验证选择。** 本轮仅测试相同的社区修改版权重，不将结果归到官方原始权重上。性能实验于11月6日完成，上线验收于11月7日完成（北京时间）。
+[官网新文章 / New original article](https://www.kingsing.com/news/KINGSING_DeepSeek_V41_Eight_GPU_24_Million_Token_Contexts.html) · [完整英文技术文章](文档/eight-gpu-24x1m.md) · [中文解读](文档/八卡方案与四卡对比.md)
+
+当前为TP4×PP2（20/20层）、CPU Engram offload、W4A8/GEMV、FP8 DS MLA KV36 GiB/卡，最大总窗口1,048,576。24路各1,000,004实际输入，零初始前缀命中，全部驻留共同生成60.18秒：聚合755.09 tokens/s，每路26.66–35.60。冷启动首字中位831.47秒、最慢1439.22秒，不能把容量等同于快速冷启动。
+
+相较原四卡正式K5基线，8路短输入吞吐提高16.78%–23.56%；单路中文/代码分别慢5.93%/3.58%，英文快1.97%。GSM8K197/200、逐题评分答案同原四卡；普通短题28/30，原四卡29/30；低思考30/30。精度路线保持，不宣称全面无损或质量提升。
+
+一小时稳定性验收由操作者取消，未执行；24路容量验收不是长期稳定性证明。本轮只测同一社区检查点，不把结果归到官方原始模型。最终关闭SP/GATHER/PIPE；拒绝的候选成绩不混入最终结果。
+
+- [脱敏逐批计时、容量与质量数据](数据/2026-11-09-eight-gpu.json)
+- [八卡运行配置与复现边界](配置/2026-11-09-eight-gpu.json)
+- 离线复算：`python 工具/核验八卡数据.py`；只读公开数据，不连接模型或运行新评测。
+- 当前镜像没有公开分发，配置快照不等于完整可重建的一键安装器。
+
+## 历史：2026-11-07 四卡更新：W4A8 融合与冷预填充优化
+
+**该历史阶段默认切换为 W4A8 融合 + DSpark K5（standard），适合单任务中文/代码输出；K3 保留为并发优先的已验证选择。** 本轮仅测试相同的社区修改版权重，不将结果归到官方原始权重上。性能实验于11月6日完成，上线验收于11月7日完成（北京时间）。
 
 | Workload / metric | Original A16 K3 | W4A8 K3 | W4A8 K5 |
 |---|---:|---:|---:|

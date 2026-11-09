@@ -1,0 +1,58 @@
+{
+  "model_repo": "mrfakename/DeepSeek-V4.1-Flash-1017-abliterated",
+  "model_revision": "517efab9ccfef7f714dbd7d679f181a86f43ccf9",
+  "image_content_id": "sha256:9e68178edf1483d857c0baa01f41a4bdd9dd925177aacfe684b4116404485f83",
+  "image_note": "Local content ID; not a publicly pullable image. This repository does not contain the complete eight-GPU build or all local patches.",
+  "base_image": "vllm/vllm-openai:nightly-df3bd094aeea829f27baa0a5282830464f601d9f",
+  "software": {
+    "vllm": "0.32.1rc1.dev117+gdf3bd094a",
+    "torch": "2.14.0+cu130"
+  },
+  "arguments": {
+    "--tensor-parallel-size": "4",
+    "--pipeline-parallel-size": "2",
+    "--max-model-len": "1048576",
+    "--max-num-seqs": "24",
+    "--max-num-batched-tokens": "8192",
+    "--kv-cache-memory-bytes": "38654705664",
+    "--compilation-config": "{\"cudagraph_mode\": \"FULL_DECODE_ONLY\", \"compile_sizes\": [], \"max_cudagraph_capture_size\": 128, \"cudagraph_decoder_replay\": false}",
+    "--speculative-config": "{\"method\": \"dspark\", \"num_speculative_tokens\": 5, \"draft_sample_method\": \"probabilistic\", \"rejection_sample_method\": \"standard\", \"enable_adaptive_verification\": false, \"num_speculative_tokens_per_batch_size\": [[1, 4, 5], [5, 32, 3]]}",
+    "--engram-config": "{\"cpu_offload\": true, \"use_thp\": true}",
+    "--dtype": "bfloat16",
+    "--kv-cache-dtype": "fp8_ds_mla",
+    "--attention-backend": "FLASHINFER_MLA_SPARSE_DSV41"
+  },
+  "environment": {
+    "VLLM_MOET_SM120_GEMV": "1",
+    "VLLM_LANGCHAO_PP2_REPLAY_GRAPHS": "0",
+    "VLLM_MOET_PREFILL_SP_RS": "p2p",
+    "VLLM_MOET_PREFILL_PIPE": "0",
+    "VLLM_MOET_PREFILL_PIPE_REPLAY_GRAPHS": "0",
+    "VLLM_MOET_PREFILL_PIPE_PHASE_GRAPHS": "0",
+    "VLLM_MOET_PREFILL_PIPE_SHARED_TAIL": "0",
+    "VLLM_MOET_PREFILL_SP": "1",
+    "VLLM_LANGCHAO_PP2_PREFILL_SP": "0",
+    "VLLM_B12X_MOE_FP4_FORCE_A16": "0",
+    "VLLM_USE_BREAKABLE_CUDAGRAPH": "1",
+    "VLLM_MOET_PREFILL_SP_GATHER": "mxfp8",
+    "VLLM_PP_LAYER_PARTITION": "20,20",
+    "VLLM_MOET_PREFILL_PIPE_DEVICE_COMM": "0"
+  },
+  "cpu_engram_GiB_approx": 188.83,
+  "tp": 4,
+  "pp": 2,
+  "layer_partition": [
+    20,
+    20
+  ],
+  "kv_GiB_per_gpu": 36,
+  "max_num_seqs": 24,
+  "max_model_len": 1048576,
+  "build_scope": "Prebuilt vLLM/PyTorch plus Moet, modified Python sources and selected compiled CUDA extensions, not a full source rebuild of vLLM/PyTorch.",
+  "limitations": [
+    "NUMA/GPU mapping is machine-specific.",
+    "Parameters alone do not reproduce custom PP2 and dynamic DSpark graph-dispatch changes.",
+    "No external-host rebuild validation or public image distribution.",
+    "Model weights, full datasets, credentials and private operational logs are excluded."
+  ]
+}
