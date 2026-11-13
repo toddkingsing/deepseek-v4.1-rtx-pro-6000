@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "kingsing": {
+      "disabled": false,
+      "serverUrl": "https://api.kingsing.com/v1/mcp?tools=web_fetch,generate_image",
+      "headers": {
+        "Authorization": "Bearer YOUR_KINGSING_API_KEY"
+      }
+    }
+  }
+}

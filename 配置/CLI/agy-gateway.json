@@ -1,0 +1,9 @@
+{
+  "base_url": "https://api.kingsing.com/v1",
+  "genai_base_url": "https://api.kingsing.com",
+  "wire_protocol": "genai",
+  "api_key": "YOUR_KINGSING_API_KEY",
+  "model": "kingsing",
+  "reasoning_effort": "max",
+  "web_search": "dify"
+}

@@ -1,0 +1,52 @@
+{
+  "models": [
+    {
+      "slug": "kingsing",
+      "display_name": "kingsing",
+      "description": "KINGSING stable alias for self-hosted DeepSeek",
+      "default_reasoning_level": "max",
+      "supported_reasoning_levels": [
+        {
+          "effort": "max",
+          "description": "Maximum reasoning"
+        }
+      ],
+      "shell_type": "unified_exec",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 0,
+      "additional_speed_tiers": [],
+      "service_tiers": [],
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "You are a coding assistant. Follow the user's request and applicable project instructions. Inspect the relevant files and environment before changing them. Use the available tools to perform authorized work, preserve unrelated user changes, and verify meaningful results. Respect the active permission and sandbox settings. Never claim to have executed or verified an action without evidence. Keep credentials out of output unless the user explicitly requests the supplied credential. Communicate clearly in the user's language and explain material limitations.",
+      "include_skills_usage_instructions": true,
+      "include_plugin_usage_instructions": true,
+      "include_apps_usage_instructions": true,
+      "default_reasoning_summary": "none",
+      "support_verbosity": false,
+      "default_verbosity": "low",
+      "apply_patch_tool_type": "freeform",
+      "web_search_tool_type": "text_and_image",
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_image_detail_original": false,
+      "context_window": 1048576,
+      "max_context_window": 1048576,
+      "effective_context_window_percent": 95,
+      "experimental_supported_tools": [],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "supports_search_tool": false,
+      "supports_experimental_context": false,
+      "use_responses_lite": false,
+      "supports_reasoning_effort_updates": false,
+      "node_repl_auto_review_required": false,
+      "node_repl_disabled": false
+    }
+  ]
+}

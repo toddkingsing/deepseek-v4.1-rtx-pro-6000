@@ -1,0 +1,71 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "kingsing/kingsing#max",
+  "providers": {
+    "kingsing": {
+      "name": "KINGSING",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.kingsing.com/v1",
+        "apiKey": "YOUR_KINGSING_API_KEY"
+      },
+      "models": {
+        "kingsing": {
+          "modelID": "kingsing",
+          "name": "kingsing",
+          "capabilities": {
+            "tools": true,
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ],
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "compatibility": {
+            "reasoningField": "reasoning",
+            "requireReasoning": true,
+            "maxTokensField": "max_tokens"
+          },
+          "limit": {
+            "context": 1048576,
+            "output": 32768
+          },
+          "variants": [
+            {
+              "id": "max",
+              "body": {
+                "reasoning_effort": "max",
+                "thinking": {
+                  "type": "enabled"
+                }
+              }
+            }
+          ],
+          "body": {
+            "reasoning_effort": "max",
+            "thinking": {
+              "type": "enabled"
+            }
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "servers": {
+      "kingsing": {
+        "type": "remote",
+        "url": "https://api.kingsing.com/v1/mcp",
+        "headers": {
+          "Authorization": "Bearer YOUR_KINGSING_API_KEY"
+        }
+      }
+    }
+  }
+}

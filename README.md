@@ -3,6 +3,20 @@
 
 本仓库为 KINGSING 官网公司新闻的摘要转载与配套技术资料。完整文章首先发表于官网；此处保留脱敏配置、可核查数据和复现说明。**Original publication: KINGSING Company News. This repository contains an attributed summary and supporting technical material.**
 
+## 2026-11-13：本地 DeepSeek 接入 Claude Code、Codex、OpenCode 与 Antigravity
+
+[官网英文原文 / New original article](https://www.kingsing.com/news/KINGSING_DeepSeek_V41_Flash_CLI_Integration.html) · [中文完整指南](文档/CLI接入指南.md) · [English guide](文档/cli-integration.md)
+
+KINGSING 已将自部署 DeepSeek-V4.1-Flash-1017 接入四个官方 CLI。服务端同时提供 Anthropic Messages、OpenAI Responses、OpenAI Chat Completions 和 Gemini generateContent，客户端统一使用稳定别名 `kingsing` 与 `max` 推理档位。
+
+接入不只替换 Base URL：网关保留流式输出和工具调用，处理 Claude Code 的 PDF 文档块与延迟工具引用、Codex 的自定义 Responses provider 与 `apply_patch`、OpenCode 的图片/PDF 能力声明、Antigravity 的 GenAI 工具结果与模型上限，并提供 Dify 搜索和 MCP 工具。
+
+2026-11-12 的隔离验收使用 Claude Code 2.1.318、Codex CLI 0.167.1、OpenCode 2.2.7 与 Antigravity 1.5.6。四个 CLI、Dify 搜索、MCP 工具列表、PDF、延迟工具和 Gemini 入口全部通过；这不是新的模型质量或性能评测。
+
+- [四套客户端完整配置](配置/CLI/README.md)
+- [脱敏验收快照](数据/2026-11-13-cli-validation.json)
+- 离线核验：`python 工具/核验CLI配置.py`
+
 ## 2026-11-09：八卡正式方案与24路百万输入
 
 [官网新文章 / New original article](https://www.kingsing.com/news/KINGSING_DeepSeek_V41_Eight_GPU_24_Million_Token_Contexts.html) · [完整英文技术文章](文档/eight-gpu-24x1m.md) · [中文解读](文档/八卡方案与四卡对比.md)

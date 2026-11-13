@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "model_alias": "kingsing",
+  "service": {
+    "openai_base_url": "https://api.kingsing.com/v1",
+    "anthropic_base_url": "https://api.kingsing.com",
+    "genai_base_url": "https://api.kingsing.com",
+    "mcp_url": "https://api.kingsing.com/v1/mcp",
+    "context_window": 1048576,
+    "max_output_tokens": 32768
+  },
+  "tested_versions": {
+    "claude_code": "2.1.318",
+    "codex_cli": "0.167.1",
+    "opencode": "2.2.7",
+    "antigravity": "1.5.6"
+  },
+  "test_prompt": "Calculate 12347 * 9876 carefully without tools. Reply with the number only.",
+  "expected_answer": 121938972,
+  "clients": {
+    "claude_code": {
+      "passed": true,
+      "protocol": "Anthropic Messages"
+    },
+    "codex_cli": {
+      "passed": true,
+      "protocol": "OpenAI Responses"
+    },
+    "opencode": {
+      "passed": true,
+      "protocol": "OpenAI Chat Completions"
+    },
+    "antigravity": {
+      "passed": true,
+      "protocol": "Gemini generateContent"
+    }
+  },
+  "gateway_probes": {
+    "dify_search": {
+      "passed": true,
+      "reported_search_requests": 2
+    },
+    "mcp_tools": {
+      "passed": true,
+      "tools": [
+        "web_search",
+        "web_fetch",
+        "generate_image"
+      ]
+    },
+    "pdf_document": {
+      "passed": true,
+      "marker": "KINGSING-PDF-PROBE-4172"
+    },
+    "deferred_tool_reference": {
+      "passed": true
+    },
+    "gemini_entry": {
+      "passed": true
+    }
+  },
+  "environment": {
+    "description": "Isolated configuration root and temporary profile; production CLI profiles were not modified.",
+    "new_model_quality_benchmark": false,
+    "inference_service_changed": false
+  },
+  "limitations": [
+    "Compatibility checks are not a new quality or performance benchmark.",
+    "Claude Code prints an unrecognized_model notice for the custom alias.",
+    "Codex built-in web search is disabled; MCP supplies search and fetch.",
+    "Antigravity requires the genai wire and explicit admin model limits for PDF and image tool results.",
+    "OpenCode provider configuration is version-sensitive."
+  ]
+}

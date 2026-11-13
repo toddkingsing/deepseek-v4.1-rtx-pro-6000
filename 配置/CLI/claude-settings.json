@@ -1,0 +1,16 @@
+{
+  "model": "kingsing",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.kingsing.com",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_KINGSING_API_KEY",
+    "ANTHROPIC_MODEL": "kingsing",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "kingsing",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "kingsing",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "kingsing",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "kingsing",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "kingsing",
+    "CLAUDE_CODE_EFFORT_LEVEL": "max",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "1048576",
+    "CLAUDE_CODE_AUTO_MODE_SERVER": "0"
+  }
+}

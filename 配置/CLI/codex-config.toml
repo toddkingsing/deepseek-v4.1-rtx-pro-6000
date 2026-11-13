@@ -1,0 +1,27 @@
+model = "kingsing"
+model_provider = "kingsing"
+model_context_window = 1048576
+model_reasoning_effort = "max"
+plan_mode_reasoning_effort = "max"
+web_search = "disabled"
+model_catalog_json = "C:/Users/YOU/.codex/models-kingsing.json"
+
+[model_providers.kingsing]
+name = "kingsing"
+base_url = "https://api.kingsing.com/v1"
+wire_api = "responses"
+requires_openai_auth = false
+supports_websockets = false
+experimental_bearer_token = "YOUR_KINGSING_API_KEY"
+
+[mcp_servers.kingsing]
+url = "https://api.kingsing.com/v1/mcp"
+startup_timeout_sec = 30
+tool_timeout_sec = 330
+
+[mcp_servers.kingsing.http_headers]
+Authorization = "Bearer YOUR_KINGSING_API_KEY"
+
+[memories]
+extract_model = "kingsing"
+consolidation_model = "kingsing"

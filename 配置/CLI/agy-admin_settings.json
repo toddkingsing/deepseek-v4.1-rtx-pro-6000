@@ -1,0 +1,26 @@
+{
+  "models": {
+    "defaultModelId": "kingsing",
+    "list": [
+      {
+        "modelId": "kingsing",
+        "displayName": "kingsing",
+        "maxTokens": 1048576,
+        "maxOutputTokens": 32768,
+        "supportsImages": true,
+        "supportsPdf": true
+      }
+    ],
+    "tiers": {
+      "flash": [
+        "kingsing"
+      ],
+      "flashLite": [
+        "kingsing"
+      ],
+      "pro": [
+        "kingsing"
+      ]
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "date": "2026-11-13",
+  "model_alias": "kingsing",
+  "reasoning_effort": "max",
+  "service": {
+    "openai_base_url": "https://api.kingsing.com/v1",
+    "anthropic_base_url": "https://api.kingsing.com",
+    "genai_base_url": "https://api.kingsing.com",
+    "mcp_url": "https://api.kingsing.com/v1/mcp",
+    "context_window": 1048576,
+    "max_output_tokens": 32768,
+    "input_modalities": [
+      "text",
+      "image"
+    ],
+    "pdf_input": true
+  },
+  "clients": {
+    "claude_code": {
+      "model": "kingsing",
+      "env": {
+        "ANTHROPIC_BASE_URL": "https://api.kingsing.com",
+        "ANTHROPIC_AUTH_TOKEN": "YOUR_KINGSING_API_KEY",
+        "ANTHROPIC_MODEL": "kingsing",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "kingsing",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "kingsing",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "kingsing",
+        "ANTHROPIC_DEFAULT_FABLE_MODEL": "kingsing",
+        "CLAUDE_CODE_SUBAGENT_MODEL": "kingsing",
+        "CLAUDE_CODE_EFFORT_LEVEL": "max",
+        "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "1048576",
+        "CLAUDE_CODE_AUTO_MODE_SERVER": "0"
+      }
+    },
+    "codex": {
+      "config_toml": "model = \"kingsing\"\nmodel_provider = \"kingsing\"\nmodel_context_window = 1048576\nmodel_reasoning_effort = \"max\"\nplan_mode_reasoning_effort = \"max\"\nweb_search = \"disabled\"\nmodel_catalog_json = \"C:/Users/YOU/.codex/models-kingsing.json\"\n\n[model_providers.kingsing]\nname = \"kingsing\"\nbase_url = \"https://api.kingsing.com/v1\"\nwire_api = \"responses\"\nrequires_openai_auth = false\nsupports_websockets = false\nexperimental_bearer_token = \"YOUR_KINGSING_API_KEY\"\n\n[mcp_servers.kingsing]\nurl = \"https://api.kingsing.com/v1/mcp\"\nstartup_timeout_sec = 30\ntool_timeout_sec = 330\n\n[mcp_servers.kingsing.http_headers]\nAuthorization = \"Bearer YOUR_KINGSING_API_KEY\"\n\n[memories]\nextract_model = \"kingsing\"\nconsolidation_model = \"kingsing\"\n",
+      "model_catalog": "配置/CLI/codex-models-kingsing.json"
+    },
+    "opencode": {
+      "$schema": "https://opencode.ai/config.json",
+      "model": "kingsing/kingsing#max",
+      "providers": {
+        "kingsing": {
+          "name": "KINGSING",
+          "package": "@opencode/ai/providers/openai-compatible",
+          "settings": {
+            "baseURL": "https://api.kingsing.com/v1",
+            "apiKey": "YOUR_KINGSING_API_KEY"
+          },
+          "models": {
+            "kingsing": {
+              "modelID": "kingsing",
+              "name": "kingsing",
+              "capabilities": {
+                "tools": true,
+                "input": [
+                  "text",
+                  "image",
+                  "pdf"
+                ],
+                "output": [
+                  "text"
+                ],
+                "reasoning": {
+                  "supported": true
+                }
+              },
+              "compatibility": {
+                "reasoningField": "reasoning",
+                "requireReasoning": true,
+                "maxTokensField": "max_tokens"
+              },
+              "limit": {
+                "context": 1048576,
+                "output": 32768
+              },
+              "variants": [
+                {
+                  "id": "max",
+                  "body": {
+                    "reasoning_effort": "max",
+                    "thinking": {
+                      "type": "enabled"
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "reasoning_effort": "max",
+                "thinking": {
+                  "type": "enabled"
+                }
+              }
+            }
+          }
+        }
+      },
+      "mcp": {
+        "servers": {
+          "kingsing": {
+            "type": "remote",
+            "url": "https://api.kingsing.com/v1/mcp",
+            "headers": {
+              "Authorization": "Bearer YOUR_KINGSING_API_KEY"
+            }
+          }
+        }
+      }
+    },
+    "antigravity": {
+      "gateway": {
+        "base_url": "https://api.kingsing.com/v1",
+        "genai_base_url": "https://api.kingsing.com",
+        "wire_protocol": "genai",
+        "api_key": "YOUR_KINGSING_API_KEY",
+        "model": "kingsing",
+        "reasoning_effort": "max",
+        "web_search": "dify"
+      },
+      "admin_settings": {
+        "models": {
+          "defaultModelId": "kingsing",
+          "list": [
+            {
+              "modelId": "kingsing",
+              "displayName": "kingsing",
+              "maxTokens": 1048576,
+              "maxOutputTokens": 32768,
+              "supportsImages": true,
+              "supportsPdf": true
+            }
+          ],
+          "tiers": {
+            "flash": [
+              "kingsing"
+            ],
+            "flashLite": [
+              "kingsing"
+            ],
+            "pro": [
+              "kingsing"
+            ]
+          }
+        }
+      },
+      "mcp_config": {
+        "mcpServers": {
+          "kingsing": {
+            "disabled": false,
+            "serverUrl": "https://api.kingsing.com/v1/mcp?tools=web_fetch,generate_image",
+            "headers": {
+              "Authorization": "Bearer YOUR_KINGSING_API_KEY"
+            }
+          }
+        }
+      }
+    }
+  },
+  "notes": [
+    "The API key is a placeholder and must be replaced before use.",
+    "Codex model_catalog_json must be changed to an absolute local path.",
+    "Antigravity launcher must point ProgramData at the directory containing the admin settings."
+  ]
+}
